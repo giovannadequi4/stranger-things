@@ -8,13 +8,13 @@ import com.ds.strangerThings.dto.ApiCharacterDto;
 
 import java.util.List;
 
-@FeignClient(name = "strangerThings", url = "https://strangerthingsapi.netlify.app/api")
+@FeignClient(name = "strangerThings", url = "https://hawapi.theproject.id/api/v1/characters/")
 public interface ApiCharacterClient {
 
-    @GetMapping("/characters")
+    @GetMapping
     List<ApiCharacterDto> findAll();
 
-    @GetMapping("/characters/{id}")
+    @GetMapping("/{id}")
     ApiCharacterDto findById(@PathVariable("id") String id);
 
 }

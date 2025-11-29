@@ -19,11 +19,9 @@
             </thead>
             <tbody>
                 <tr th:each="p : ${characters}">
-                    <td>
-                        <img th:src="${p.photo}" alt="foto" width="80"/>
-                    </td>
-                    <td th:text="${p.name}">Nome</td>
-                    <td th:text="${p.status}">Status</td>
+                    <td><img th:src="${p.thumbnail}" /></td>
+                    <td th:text="${p.first_name} + ' ' + ${p.last_name}"></td>
+                    <td th:text="${p.birth_date}">Status</td>
                     <td th:text="${p.gender}">Gênero</td>
                 </tr>
             </tbody>

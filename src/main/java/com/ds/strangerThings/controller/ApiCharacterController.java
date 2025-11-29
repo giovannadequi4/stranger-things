@@ -23,7 +23,7 @@ public class ApiCharacterController {
     @GetMapping
     public String findAll(Model model) {
         List<ApiCharacterDto> lista = apiCharacterService.findAll();
-        model.addAttribute("personagens", lista);
+        model.addAttribute("characters", lista);
         return "personagens";
     }
 
