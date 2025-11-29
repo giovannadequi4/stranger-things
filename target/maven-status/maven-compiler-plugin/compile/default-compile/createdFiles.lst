@@ -1,0 +1,5 @@
+com/ds/strangerThings/controller/ApiCharacterController.class
+com/ds/strangerThings/client/ApiCharacterClient.class
+com/ds/strangerThings/dto/ApiCharacterDto.class
+com/ds/strangerThings/StrangerThingsApplication.class
+com/ds/strangerThings/service/ApiCharacterService.class

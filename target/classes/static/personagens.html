@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Personagens</title>
+    </head>
+    <body>
+
+        <h1>Personagens</h1>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nome</th>
+                    <th>Status</th>
+                    <th>Gênero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="p : ${characters}">
+                    <td>
+                        <img th:src="${p.photo}" alt="foto" width="80"/>
+                    </td>
+                    <td th:text="${p.name}">Nome</td>
+                    <td th:text="${p.status}">Status</td>
+                    <td th:text="${p.gender}">Gênero</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
