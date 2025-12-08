@@ -1,0 +1,33 @@
+package com.ds.strangerThings.controller;
+
+import com.ds.strangerThings.service.FavoritoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+@RequestMapping("/favoritos")
+public class FavoritoController {
+    
+    @Autowired
+    private FavoritoService service;
+
+    @PostMapping("/add/{id}")
+    public String add(@PathVariable Long id) {
+        service.adicionar(id);
+        return "redirect:/personagens/listar";
+    }
+
+    @GetMapping
+    public String listar(Model model) {
+        model.addAttribute("lista", service.listar());
+        return "favoritos";
+    }
+
+    @GetMapping("/remover/{id}")
+    public String remover(@PathVariable Long id) {
+        service.remover(id);
+        return "redirect:/favoritos";
+    }
+}
