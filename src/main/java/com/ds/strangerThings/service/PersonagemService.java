@@ -35,7 +35,7 @@ public class PersonagemService {
         Personagem personagem = buscarPorId(id);
         personagem.setNome(novo.getNome());
         personagem.setDescricao(novo.getDescricao());
-        personagem.setDataNascimento(novo.getDataNascimento());
+        personagem.setUrlImagem(novo.getUrlImagem());
         return repository.save(personagem);
     }
 }
