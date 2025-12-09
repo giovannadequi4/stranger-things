@@ -11,9 +11,6 @@ import com.ds.strangerthings.dto.ApiCharacterDto;
 @Service
 public class ApiCharacterService {
     @Autowired private ApiCharacterClient apiCharacterClient;
-    public ApiCharacterDto findById(String id) {
-        return apiCharacterClient.findById(id);
-    }
 
     public List<ApiCharacterDto> findAll() {
         return apiCharacterClient.findAll();

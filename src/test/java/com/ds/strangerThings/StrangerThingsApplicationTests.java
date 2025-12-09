@@ -1,4 +1,4 @@
-package com.ds.strangerthings;
+package com.ds.strangerThings;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
