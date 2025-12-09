@@ -1,14 +1,14 @@
-package com.ds.strangerThings.controller;
+package com.ds.strangerthings.controller;
 
-import com.ds.strangerThings.service.FavoritoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+import com.ds.strangerthings.service.FavoritoService;
+
+@RestController
 @RequestMapping("/favoritos")
-public class FavoritoController {
+public class FavoritoRestController {
     
     @Autowired
     private FavoritoService service;
@@ -16,7 +16,7 @@ public class FavoritoController {
     @PostMapping("/add/{id}")
     public String add(@PathVariable Long id) {
         service.adicionar(id);
-        return "redirect:/personagens/listar";
+        return "redirect:/favoritos";
     }
 
     @GetMapping

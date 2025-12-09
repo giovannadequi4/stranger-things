@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things - Personagens</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo-principal">STRANGER THINGS</h1>
+    </header>
+
+    <nav class="navegacao">
+        <button class="btn-navegacao ativo" data-secao="listar">Listar Personagens</button>
+        <button class="btn-navegacao" data-secao="cadastro">Cadastrar</button>
+        <button class="btn-navegacao" data-secao="favoritos">Favoritos</button>
+        <button class="btn-navegacao" data-secao="catalogo">Catálogo Online</button>
+    </nav>
+
+    <main class="conteudo-principal">
+        <!-- Seção Cadastro -->
+        <section id="cadastro" class="secao-conteudo">
+            <div class="container-formulario">
+                <h2 style="color: #ff6b6b; margin-bottom: 1.5rem; text-align: center; text-shadow: 0 0 10px #ff0000;">CADASTRAR PERSONAGEM</h2>
+                <form id="formularioPersonagem">
+                    <div class="grupo-campo">
+                        <label class="rotulo-campo" for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" class="campo-texto" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label class="rotulo-campo" for="descricao">Descrição</label>
+                        <textarea id="descricao" name="descricao" class="campo-area-texto" required></textarea>
+                    </div>
+                    <div class="grupo-campo">
+                        <label class="rotulo-campo" for="urlImagem">URL da Imagem</label>
+                        <input type="url" id="urlImagem" name="urlImagem" class="campo-texto" placeholder="https://...">
+                    </div>
+                    <button type="submit" class="btn-enviar">Cadastrar Personagem</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Seção Listar -->
+        <section id="listar" class="secao-conteudo ativo">
+            <h2 style="color: #ff6b6b; margin-bottom: 1rem; text-align: center; text-shadow: 0 0 10px #ff0000;">PERSONAGENS CADASTRADOS</h2>
+            <div class="container-busca">
+                <input type="text" id="buscaLocal" class="campo-texto campo-busca" placeholder="Buscar personagens">
+            </div>
+            <div id="personagensLocais" class="lista-personagens"></div>
+        </section>
+
+        <!-- Seção Favoritos -->
+        <section id="favoritos" class="secao-conteudo">
+            <h2 style="color: #ff6b6b; margin-bottom: 1rem; text-align: center; text-shadow: 0 0 10px #ff0000;">FAVORITOS</h2>
+            <div id="personagensFavoritos" class="lista-personagens"></div>
+        </section>
+
+        <!-- Seção Catálogo Online -->
+        <section id="catalogo" class="secao-conteudo">
+            <h2 style="color: #ff6b6b; margin-bottom: 1rem; text-align: center; text-shadow: 0 0 10px #ff0000;">CATÁLOGO ONLINE</h2>
+            <div class="container-busca">
+                <input type="text" id="buscaApi" class="campo-texto campo-busca" placeholder="Buscar personagens, ex: Eleven">
+                <button class="btn-enviar" style="max-width: 500px; margin: 1rem auto; display: block;" onclick="buscarPersonagensApi()">Buscar</button>
+            </div>
+            <div id="personagensApi" class="lista-personagens"></div>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

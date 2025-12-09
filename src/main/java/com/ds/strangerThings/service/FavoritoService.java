@@ -1,12 +1,12 @@
-package com.ds.strangerThings.service;
+package com.ds.strangerthings.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ds.strangerThings.model.Favorito;
-import com.ds.strangerThings.repository.FavoritoRepository;
-import com.ds.strangerThings.repository.PersonagemRepository;
-import com.ds.strangerThings.model.Personagem;
+import com.ds.strangerthings.model.Favorito;
+import com.ds.strangerthings.model.Personagem;
+import com.ds.strangerthings.repository.FavoritoRepository;
+import com.ds.strangerthings.repository.PersonagemRepository;
 
 import java.util.List;
 

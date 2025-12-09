@@ -1,4 +1,4 @@
-package com.ds.strangerThings.dto;
+package com.ds.strangerthings.dto;
 
 import lombok.Data;
 import java.util.List;

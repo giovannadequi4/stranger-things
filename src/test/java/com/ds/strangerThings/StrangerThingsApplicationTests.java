@@ -1,10 +1,10 @@
-package com.ds.strangerThings;
+package com.ds.strangerthings;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import com.ds.strangerThings.client.ApiCharacterClient;
+import com.ds.strangerthings.client.ApiCharacterClient;
 
 @SpringBootTest
 class StrangerThingsApplicationTests {

@@ -1,4 +1,4 @@
-package com.ds.strangerThings.model;
+package com.ds.strangerthings.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

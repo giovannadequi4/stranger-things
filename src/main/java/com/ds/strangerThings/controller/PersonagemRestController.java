@@ -1,4 +1,4 @@
-package com.ds.strangerThings.controller;
+package com.ds.strangerthings.controller;
 
 import java.util.List;
 
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ds.strangerThings.model.Personagem;
-import com.ds.strangerThings.service.PersonagemService;
+import com.ds.strangerthings.model.Personagem;
+import com.ds.strangerthings.service.PersonagemService;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/personagens")
 public class PersonagemRestController {
     @Autowired
     private PersonagemService service;
